@@ -1,5 +1,8 @@
 # Recruitment Management System
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Lemersom/Recruitment-Fullstack/blob/main/README.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Lemersom/Recruitment-Fullstack/blob/main/README.pt-br.md)
+
 This project is a full-stack application designed to manage resumes efficiently, allowing users to add personal details, professional experience, academic qualifications, and contact information.
 
 ## Technologies
