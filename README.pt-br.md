@@ -1,5 +1,8 @@
 # Sistema de Gerenciamento de Currículos
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Lemersom/Recruitment-Fullstack/blob/main/README.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Lemersom/Recruitment-Fullstack/blob/main/README.pt-br.md)
+
 Este projeto é uma aplicação full-stack projetada para gerenciar currículos de forma eficiente, permitindo aos usuários adicionar dados pessoais, experiências profissionais, formações acadêmicas e informações de contato.
 
 ## Tecnologias
