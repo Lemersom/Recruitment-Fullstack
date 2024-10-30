@@ -9,6 +9,7 @@ Este projeto é uma aplicação full-stack projetada para gerenciar currículos 
 
 * Back-End: Django com Django REST Framework (DRF) para criação da API
 * Front-End: React.js com Vite para uma interface rápida e responsiva
+* Containerização: Docker para containerizar a aplicação
 
 ## Funcionalidades do Projeto
 
@@ -17,19 +18,52 @@ Este projeto é uma aplicação full-stack projetada para gerenciar currículos 
 * Validação básica dos dados de entrada, como formatos de email, números de telefone e formatos de data
 * Painel administrativo do Django para gerenciar os currículos cadastrados
 
-## Executando Localmente
-**Pré-requisitos:** Certifique-se de ter o Python e o Node.js instalados na sua máquina.
-
-### Configuração do Backend
+## Executando Localmente Com Docker
+**Pré-requisitos:** Certifique-se de ter o Docker e Docker Compose instalados na sua máquina.
 
 Clone o projeto
 ```
 git clone --recurse-submodules https://github.com/Lemersom/Recruitment-Fullstack.git
 ```
 
+Navegue até o diretório clonado
+```
+cd Recruitment-Fullstack
+```
+
+Contrua os containers
+```
+docker-compose build
+```
+
+Suba os containers
+```
+docker-compose up
+```
+
+Execute as migrações do banco de dados
+```
+docker-compose exec backend python manage.py migrate
+```
+
+Crie um SuperUsuário
+```
+docker-compose exec backend python manage.py createsuperuser
+```
+
+## Executando Localmente Sem Docker
+**Pré-requisitos:** Certifique-se de ter o Python e o Node.js instalados na sua máquina.
+
+Clone o projeto
+```
+git clone --recurse-submodules https://github.com/Lemersom/Recruitment-Fullstack.git
+```
+
+### Configuração do Backend
+
 Navegue até o diretório do backend
 ```
-cd backend
+cd Recruitment-Fullstack\backend
 ```
 
 Crie e ative um ambiente virtual
@@ -62,7 +96,7 @@ python manage.py runserver
 
 Navegue até o diretório do frontend
 ```
-cd frontend  # Caso você esteja no diretório backend, use `cd ../frontend`
+cd Recruitment-Fullstack\frontend
 ```
 
 Instale as dependências
@@ -77,5 +111,6 @@ npm run dev
 
 ## Acessando a Aplicação
 
-* API do Backend: Rodando em http://localhost:8000
-* Frontend: Rodando em http://localhost:5173
+* API do Backend: http://localhost:8000
+* Painel Admin: http://localhost:8000/admin
+* Frontend: http://localhost:5173

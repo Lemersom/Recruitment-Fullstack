@@ -9,6 +9,7 @@ This project is a full-stack application designed to manage resumes efficiently,
 
 * Back-End: Django with Django REST Framework (DRF) for creating the API
 * Front-End: React.js with Vite for fast and responsive UI
+* Containerization: Docker for containerizing the application
 
 ## Project Features
 
@@ -17,20 +18,54 @@ This project is a full-stack application designed to manage resumes efficiently,
 * Basic validation for user inputs like email formats, phone numbers, and date formats
 * Admin panel in Django for managing submitted resumes
 
-## Running Locally
+## Running Locally With Docker
 
-**Prerequisites:** Ensure you have Python and Node.js installed on your machine.
-
-### Backend Setup
+**Prerequisites:** Make sure you have Docker and Docker Compose installed on your machine.
 
 Clone the project
 ```
 git clone --recurse-submodules https://github.com/Lemersom/Recruitment-Fullstack.git
 ```
 
+Navigate to the cloned directory
+```
+cd Recruitment-Fullstack
+```
+
+Build the containers
+```
+docker-compose build
+```
+
+Start the containers
+```
+docker-compose up
+```
+
+Run database migrations
+```
+docker-compose exec backend python manage.py migrate
+```
+
+Create a SuperUser
+```
+docker-compose exec backend python manage.py createsuperuser
+```
+
+## Running Locally Without Docker
+
+**Prerequisites:** Ensure you have Python and Node.js installed on your machine.
+
+Clone the project
+```
+git clone --recurse-submodules https://github.com/Lemersom/Recruitment-Fullstack.git
+```
+
+### Backend Setup
+
 Navigate to the backend directory
 ```
-cd backend
+cd Recruitment-Fullstack\backend
 ```
 
 Create and activate a virtual environment
@@ -49,7 +84,7 @@ Run database migrations
 python manage.py migrate
 ```
 
-Create SuperUser
+Create a SuperUser
 ```
 py manage.py createsuperuser
 ```
@@ -63,7 +98,7 @@ python manage.py runserver
 
 Navigate to the frontend directory
 ```
-cd frontend  # If you are in the backend directory `cd ../frontend` 
+cd Recruitment-Fullstack\frontend 
 ```
 
 Install dependencies
@@ -78,5 +113,6 @@ npm run dev
 
 ## Accessing the Application
 
-* Backend API: Runs on http://localhost:8000
-* Frontend: Runs on http://localhost:5173
+* Backend API: http://localhost:8000
+* Admin Panel: http://localhost:8000/admin
+* Frontend: http://localhost:5173
