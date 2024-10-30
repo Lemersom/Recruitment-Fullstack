@@ -16,7 +16,7 @@ This project is a full-stack application designed to manage resumes efficiently,
 
 ## Running Locally
 
-**Prerequisites:** Ensure you have Python and Node.js installed on your machine. Clone the project and set up the backend and frontend.
+**Prerequisites:** Ensure you have Python and Node.js installed on your machine.
 
 ### Backend Setup
 
@@ -77,11 +77,3 @@ npm run dev
 
 * Backend API: Runs on http://localhost:8000
 * Frontend: Runs on http://localhost:5173
-
-
-
-
-
-
-
-
